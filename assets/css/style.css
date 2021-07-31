@@ -28,7 +28,10 @@ main{
     background-color: #FFF;
     flex:1;
 }
-
+.container{
+    max-width: 1070px;
+    margin: auto
+}
 /*
 Left-menu
 */
@@ -83,14 +86,111 @@ Menu mobile
     background-color: #f48e43;
     opacity: 0.9;
     position: fixed;
-    top: 10%;
+    top: 5%;
     padding: 12px 10px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     display: none;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     font-size: 10px;
     color: #FFF
 }
+
+/*
+Header left
+*/
+header{
+    background-color: #fdf1eb;
+    min-height: 70px;
+}
+header div.container{
+    height:inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: space-evenly;
+    /* colocar wrap pra mobile*/
+}
+.header--left h1, .header--left h2, .header--left h3{
+    font-weight: 400;
+    color: #725c5c;
+}
+.header--left h2, .header--left h3{
+    font-size: 15px;
+}
+.header--left h1{
+    font-size: 21px;
+}
+
+/*
+Header right
+*/
+.header--right{
+    height: inherit;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #333;
+}
+.header--right .user--photo div{  
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+}
+.header--right .user--photo img{
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+}
+.header--right .alert{
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    line-height: 15px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: red;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 8px;
+    position: relative;
+    bottom: 45px;
+    left: 25px;
+}
+.header--right .user--info{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 7px;
+}
+.header--right .user--info h4{
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Quicksand, Arial, Helvetica, sans-serif;
+}
+.header--right .user--info span{
+    font-size: 12px;
+    font-weight: 400;
+    font-family: Quicksand, Arial, Helvetica, sans-serif;
+}
+.header--right .language{
+    border: solid #CCC 1px;
+    border-radius: 5px;
+    height: 32px;
+    width: 95px;
+    display: flex;
+    margin-right: 20px;
+}
+.header--right .language select,.header--right .language option{
+    background-color: #fdf1eb;
+    border:none;
+    outline: none;
+    width: 93px;
+    font-family: Quicksand, Arial, Helvetica, sans-serif;
+    color: #4c4b4a;
+}
+.header--right .language img{
+    width: 23px;
+}
+
+
