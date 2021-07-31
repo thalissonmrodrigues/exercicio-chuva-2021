@@ -1,0 +1,96 @@
+/*
+Initial Config
+*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+/*
+Layout
+*/
+body{
+    display: flex;
+    height: 2000px; /*so pra testar a rolagem do menu*/
+}
+aside.left--menu{
+    width: 220px;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    display: block;
+}
+main{
+    background-color: #FFF;
+    flex:1;
+}
+
+/*
+Left-menu
+*/
+.menu--content{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    height: 100vh;
+}
+.menu--content div:first-child{
+    height: 70px;
+    background-color: #f48e43;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu--content div:first-child a{
+    color: #FFF;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+}
+nav li{
+    border-bottom: 2px #e7e7e7 solid;
+}
+nav li a{
+    display: block;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Quicksand, Arial, Helvetica, sans-serif;
+    color: #725c5c;
+    padding: 7px 0 7px 24px;
+}
+nav a.active{      
+    border-left: 5px solid;
+    border-image: linear-gradient(#ffb355, #ee7b3a);
+    border-image-slice: 1;
+    background-color: #fdf1eb;
+}
+nav a:hover{
+    background-color: #fdf1eb;
+}
+
+/*
+Menu mobile
+*/
+.menu--mobile{
+    background-color: #f48e43;
+    opacity: 0.9;
+    position: fixed;
+    top: 10%;
+    padding: 12px 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+    color: #FFF
+}
