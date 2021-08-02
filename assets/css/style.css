@@ -16,6 +16,14 @@ body{
     display: flex;
     height: 2000px; /*so pra testar a rolagem do menu*/
 }
+body::-webkit-scrollbar{
+    width: 7px;
+    background: #e7e7e7;
+}
+body::-webkit-scrollbar-thumb{
+    background: #bfbfbf;
+    border-radius: 10px;
+}
 aside.left--menu{
     width: 220px;
     position: relative;
@@ -32,6 +40,21 @@ main{
     max-width: 1070px;
     margin: auto
 }
+.btn--edit{
+    background-color: #ed7839;
+    border-radius: 3px;
+}
+.content--box{
+    border: solid #ececec 1px;
+    border-radius: 4px;
+}
+.box--title{
+    background-color: #fdf1eb;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 10px 15px;
+}
+
 /*
 Left-menu
 */
@@ -108,7 +131,7 @@ header div.container{
     display: flex;
     justify-content: space-between;
     align-items: space-evenly;
-    /* colocar wrap pra mobile*/
+    flex-wrap: wrap-reverse;
 }
 .header--left h1, .header--left h2, .header--left h3{
     font-weight: 400;
@@ -192,5 +215,215 @@ Header right
 .header--right .language img{
     width: 23px;
 }
+
+/*
+Section info content
+*/
+.content--info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+
+.content--info>div>h1{
+    max-width: 785px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #ed7839;
+    padding-bottom: 20px;
+    letter-spacing: 0.8px;
+}
+.content--info {
+    flex: 1;
+}
+
+/*
+Button Download / Star / Doi
+*/
+.button--area{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+.button--area .download{
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 15px;
+    margin-right: 5px;
+}
+.button--area .download img{
+    margin-right: 8px;
+}
+.button--area .star, .button--area .doi{
+    padding: 0 12px;
+}
+.button--area .star{
+    margin-right: 5px;
+}
+.button--area .star img, .button--area .doi img{
+    position: relative;
+    top: 5px
+}
+.content--info>div>a{
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #ed7839;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    text-decoration: none;
+    display: block;
+    padding-bottom: 10px;
+}
+
+/*
+Video
+*/
+.video>iframe{
+    width: 790px;
+    height: 440px;
+    overflow: hidden;
+    position: absolute;
+}
+.video .opacity--video{
+    width: 783px;
+    height: 440px;
+    background-color: rgba(140, 50, 6, 0.5);
+    border-radius: 3px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+/*
+Video opacity
+*/
+.opacity--video{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px 0 50px 36px;
+}
+.opacity--video .title--video{
+    font-size: 24px;
+    font-weight: 900;
+    color: #FFF;
+    letter-spacing: 1px;
+}
+.video--author--info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.video .img--video{
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    border: solid #e37337 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video .img--video img{
+    height: 70px;
+    width: 70px;
+    border-radius: inherit;
+}
+.author--video{
+    margin-left: 20px;
+}
+.author--video h2{
+    font-size: 33px;
+    font-weight: 900;
+    color: #FFF;
+    letter-spacing: 2px;
+}
+.author--video h3{
+    font-size: 18px;
+    font-weight: 900;
+    color: #FFF;
+    letter-spacing: 2px;
+}
+
+/*
+Aside video
+*/
+.aside--video{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 30px;
+}
+.aside--video .content--box{
+    flex: 1;
+    width: 100%;
+}
+/*
+Details
+*/
+.aside--video .details{
+    overflow-x: auto;    
+   overflow-y: scroll;
+   height: 365px;
+}
+.aside--video .details ul{
+    margin: 0 15px 25px 15px;
+}
+.aside--video .details ul li{
+    list-style: none;
+    font-family: Quicksand, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #5c5c5c;
+}
+.aside--video .details ul span{
+    font-weight: 500;
+}
+
+/*
+Author details
+*/
+.aside--video .details ul.author li{
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 19px;
+}
+/*
+Institution details
+*/
+.aside--video .details ul.institution{
+    margin-top: 30px;
+}
+.aside--video .details sup{
+    font-family: Quicksand, Arial, Helvetica, sans-serif;
+    font-size: 7px;
+}
+.aside--video .details ul.institution li{
+    font-size: 12px;
+}
+
+/*
+Config scroll details
+*/
+.aside--video .config--scroll{
+    padding: 10px 5px 20px 0px;
+}
+.details::-webkit-scrollbar {
+    width: 3px;
+    background: #e7e7e7;   
+}
+.details::-webkit-scrollbar-thumb {
+    background: #bfbfbf;
+    border-radius: 10px;
+}
+.details::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+
+
 
 
