@@ -1,5 +1,5 @@
 /*
-Initial Config
+*****Initial Config*****
 */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@400;500;700;900&display=swap');
 *{
@@ -10,11 +10,10 @@ Initial Config
 }
 
 /*
-Layout
+*****Layout*****
 */
 body{
     display: flex;
-    height: 2000px; /*so pra testar a rolagem do menu*/
 }
 body::-webkit-scrollbar{
     width: 7px;
@@ -25,20 +24,21 @@ body::-webkit-scrollbar-thumb{
     border-radius: 10px;
 }
 aside.left--menu{
-    width: 220px;
+    min-width: 220px;
     position: relative;
     top: 0;
     left: 0;
     background-color: #FFF;
     display: block;
+    height: 100%;
+    z-index: 50;
 }
 main{
     background-color: #FFF;
     flex:1;
 }
 .container{
-    max-width: 1070px;
-    margin: auto
+    padding: 0 3%;
 }
 .btn--edit{
     background-color: #ed7839;
@@ -56,8 +56,9 @@ main{
 }
 
 /*
-Left-menu
+*****Left-menu*****
 */
+
 .menu--content{
     position: fixed;
     top: 0; 
@@ -103,24 +104,25 @@ nav a:hover{
 }
 
 /*
-Menu mobile
+*****Menu mobile*****
 */
 .menu--mobile{
     background-color: #f48e43;
-    opacity: 0.9;
+    opacity: 0.7;
     position: fixed;
     top: 5%;
-    padding: 12px 10px;
+    padding: 12px 7px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     display: none;
     text-align: center;
     font-size: 10px;
-    color: #FFF
+    color: #FFF;
+    z-index: 10;
 }
 
 /*
-Header left
+*****Header left*****
 */
 header{
     background-color: #fdf1eb;
@@ -133,11 +135,14 @@ header div.container{
     align-items: space-evenly;
     flex-wrap: wrap-reverse;
 }
-.header--left h1, .header--left h2, .header--left h3{
+.header--left h1,
+.header--left h2,
+.header--left h3{
     font-weight: 400;
     color: #725c5c;
 }
-.header--left h2, .header--left h3{
+.header--left h2,
+.header--left h3{
     font-size: 15px;
 }
 .header--left h1{
@@ -145,7 +150,7 @@ header div.container{
 }
 
 /*
-Header right
+*****Header right*****
 */
 .header--right{
     height: inherit;
@@ -156,9 +161,9 @@ Header right
     color: #333;
 }
 .header--right .user--photo div{  
-    width: 35px;
-    height: 35px;
-    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
 }
 .header--right .user--photo img{
     height: inherit;
@@ -177,8 +182,8 @@ Header right
     font-weight: 700;
     font-size: 8px;
     position: relative;
-    bottom: 45px;
-    left: 25px;
+    bottom: 40px;
+    left: 20px;
 }
 .header--right .user--info{
     display: flex;
@@ -204,7 +209,8 @@ Header right
     display: flex;
     margin-right: 20px;
 }
-.header--right .language select,.header--right .language option{
+.header--right .language select,
+.header--right .language option{
     background-color: #fdf1eb;
     border:none;
     outline: none;
@@ -217,13 +223,13 @@ Header right
 }
 
 /*
-Section info content
+*****Section info content*****
 */
 .content--info{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     padding-top: 15px;
+    flex-direction: row;
 }
 
 .content--info>div>h1{
@@ -239,7 +245,7 @@ Section info content
 }
 
 /*
-Button Download / Star / Doi
+*****Button Download / Star / Doi*****
 */
 .button--area{
     display: flex;
@@ -257,13 +263,15 @@ Button Download / Star / Doi
 .button--area .download img{
     margin-right: 8px;
 }
-.button--area .star, .button--area .doi{
+.button--area .star,
+.button--area .doi{
     padding: 0 12px;
 }
 .button--area .star{
     margin-right: 5px;
 }
-.button--area .star img, .button--area .doi img{
+.button--area .star img,
+.button--area .doi img{
     position: relative;
     top: 5px
 }
@@ -279,25 +287,30 @@ Button Download / Star / Doi
 }
 
 /*
-Video
+*****Video*****
 */
+.video{
+    position: relative;
+}
 .video>iframe{
     width: 790px;
     height: 440px;
     overflow: hidden;
-    position: absolute;
+    position: relative;
+    border-radius: 5px;
 }
 .video .opacity--video{
-    width: 783px;
+    width: 790px;
     height: 440px;
     background-color: rgba(140, 50, 6, 0.5);
     border-radius: 3px;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
+    display: flex; /* sai ao clicar flex/none*/
 }
 /*
-Video opacity
+*****Video opacity*****
 */
 .opacity--video{
     display: flex;
@@ -347,7 +360,7 @@ Video opacity
 }
 
 /*
-Aside video
+*****Aside video*****
 */
 .aside--video{
     flex: 1;
@@ -355,13 +368,14 @@ Aside video
     flex-direction: column;
     align-items: flex-end;
     margin-left: 30px;
+    min-width: 220px;
 }
 .aside--video .content--box{
     flex: 1;
     width: 100%;
 }
 /*
-Details
+*****Details*****
 */
 .aside--video .details{
     overflow-x: auto;    
@@ -384,7 +398,7 @@ Details
 }
 
 /*
-Author details
+*****Author details*****
 */
 .aside--video .details ul.author li{
     font-size: 14px;
@@ -392,7 +406,7 @@ Author details
     line-height: 19px;
 }
 /*
-Institution details
+*****Institution details*****
 */
 .aside--video .details ul.institution{
     margin-top: 30px;
@@ -406,7 +420,7 @@ Institution details
 }
 
 /*
-Config scroll details
+*****Config scroll details*****
 */
 .aside--video .config--scroll{
     padding: 10px 5px 20px 0px;
@@ -424,10 +438,11 @@ Config scroll details
 }
 
 /*
-Sumary
+*****Sumary*****
 */
-.sumary {
+.sumary{
     margin-top: 30px;
+    cursor: pointer;
 }
 .sumary .sumary--content{
     padding: 0 15px 15px 15px;
@@ -436,7 +451,8 @@ Sumary
 .sumary .sumary--content p{
     font-size: 14px;
     font-family: Quicksand, Arial, Helvetica, sans-serif;
-    font-size: 400;
+    font-weight: 400;
+    color: #595959;
     line-height: 23px;
     margin-top: 15px;
     text-align: justify;
@@ -460,11 +476,519 @@ Sumary
     background-color: #FFF;
 }
 .sumary .sumary--content a>span{
-    color: #000;
+    color: #595959;
     font-weight: 400;
+}
+
+/*
+*****Discussions*****
+*/
+.discussions{
+    margin-top: 30px;
+}
+.discussions .discussion--area{
+    padding: 15px;
+}
+.discussions .questions{
+    border-bottom: solid #ececec 1px;
+    margin-bottom: 10px;
+}
+
+/*
+*****Standard Content*****
+*/
+.discussions .standard--content{
+    display: flex; /*muda ao clicar no botão criar tópico flex*/
+    flex-direction: column;
+    align-items: center;
+}
+.discussions .standard--content h1{
+    font-size: 18px;
+    color: #ed7839;
+    font-weight: 700;
+}
+.discussions .standard--content div{
+    text-align: center;
+}
+.discussions .standard--content div>img{
+    margin: 25px;
+}
+.discussions .standard--content p{
+    max-width: 600px;
+    text-align: center;
+    font-family: Quicksand, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #595959;
+}
+.discussions .standard--content button{
+    position: relative;
+    top: 17px;
+    display: flex;
+    padding: 8px 12px;
+    font-size: 15px;
+    color: #FFF;
+    background: linear-gradient(#fdaf52, #f1833e);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.discussions .standard--content button>img{
+    margin-right: 10px;
+}
+
+/*
+*****Topic form*****
+*/
+.discussion--area .topic--form{
+    display: none;  /*troca ao clicar em enviar block*/
+}
+.discussion--area .topic--form p{
+    text-align: center;
+    font-size: 14px;
+    color: #5c5c5c;
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-family:  Quicksand, Arial, Helvetica, sans-serif;
+}
+.discussion--area .topic--form form label{
+    display: inline-block;
+    width: 100%;
+    color: #ed7839;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.discussion--area .topic--form form input,
+.discussion--area .topic--form form textarea{
+    width: 100%;
+    outline: none;
+    padding: 9px 25px;
+    border: solid #e7e7e7 1px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #5c5c5c;
+    margin-top: 5px;
+    font-family:  Quicksand, Arial, Helvetica, sans-serif;
+}
+.discussion--area .topic--form form textarea{
+    resize: none;
+}
+.discussion--area .topic--form label>div{
+    display: flex;
+    text-align: center;
+    position: relative;
+    bottom: 5px;
+    background-color: #EAF1F2;
+    padding: 5px;
+    border: solid 1px #e7e7e7;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.discussion--area .topic--form label>div>div{
+    margin: 0 12px;
+    cursor: pointer;
+}
+.discussion--area .topic--form label button{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    border: none;
+    border-bottom-right-radius: 3px;
+    outline: none;
+    background: linear-gradient(#fdaf52, #f1833e);
+    font-size: 15px;
+    font-weight: 500;
+    color: #FFF;
+    font-family:  Quicksand, Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+/*
+*****Topic submitted*****
+*/
+.discussion--area .topic--submitted{
+    display: none; /*muda ao clicar no botão block*/
+    text-align: center;
+}
+.discussion--area .topic--submitted h1{
+    font-size: 18px;
+    color: #ed7839;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.discussion--area .topic--submitted p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #5c5c5c;
+    font-family:  Quicksand, Arial, Helvetica, sans-serif;
+    margin-bottom: 35px;
+}
+.discussion--area .topic--submitted a{
+    font-size: 14px;
+    font-weight: 500;
+    font-family:  Quicksand, Arial, Helvetica, sans-serif;
+    color: #f48e43;
+    display: block;
+    margin-bottom: 35px;
+}
+.discussion--area .topic--submitted button{
+    position: relative;
+    top: 17px;
+    padding: 8px 45px;
+    font-size: 15px;
+    color: #FFF;
+    background: linear-gradient(#fdaf52, #f1833e);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+/*
+*****Question submitted*****
+*/
+.discussion--area .model.model--submitted{
+    position: relative;
+    height: 140px;
+    display: none; /* ativa block quando envia tópico*/
+}
+.discussion--area .model.model--submitted .question{
+    filter:blur(3px);
+    opacity: 0.5;
+}
+.discussion--area .model.model--submitted .opacity--submitted{
+   background-color: #f7f7f7;
+   position:absolute;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.discussion--area .model.model--submitted .opacity--submitted h1{
+    font-size: 16px;
+    font-family:  Quicksand, Arial, Helvetica, sans-serif;
+    color: #5c5c5c;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.discussion--area .model.model--submitted .opacity--submitted>div{
+    font-size: 14px;
+    font-family:  Quicksand, Arial, Helvetica, sans-serif;
+    color: #ed7839;
+    text-decoration: underline;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/*
+*****Questions area*****
+*/
+.card--title,
+.card--author,
+.card--text{
+    font-family:  Quicksand, Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+.questions--area .model{
+    margin-top: 25px;
+    border: solid #ececec 1px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px #CCC;
+}
+.questions--area .card{
+    padding: 10px 20px;
+}
+.questions--area .card--title{
+    color: #ed7839;
+    font-size: 16px;
+    font-weight: 700;
+}
+.questions--area .card--author{
+    font-size: 12px;
+    font-weight: 700;
+    color: #5c5c5c;
+}
+.questions--area .card--text{
+    font-size: 14px;
+    color: #5c5c5c;
+    margin: 5px 0;
+}
+.questions--area .card .card--text{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.discussion--area .s--text>span{
+    display: block; /*clickou fica none*/
+}
+/*
+*****Question button*****
+*/
+.discussion--area .question--button{
+    display: flex;
+    align-items: center;
+}
+.discussion--area .question--button .more--options{
+    cursor: pointer;
+}
+.discussion--area .question--button .more--options>span{
+    display: block;
+    padding: 2px;
+    margin: 3px 0;
+    background-color: #ed7839;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+.discussion--area .question--button .like{
+    padding: 4px 6px;
+    background-color: #ed7839;
+    border: none;
+    border-radius: 2px;
+    display: flex;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.discussion--area .question--button .all--like,
+.discussion--area .question--button .all--like>span,
+.discussion--area .question--button .all--response,
+.discussion--area .question--button .all--response>span{
+    font-family: Quicksand, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+.discussion--area .question--button .all--like{
+    margin-right: 15px;
+}
+
+/*
+*****Question responses*****
+*/
+.discussion--area .question--responses{
+    display: none; /*muda pra block se click*/
+}
+.discussion--area .question--responses .question{
+    padding: 10px 20px;
+    border-top: solid #ececec 1px;
+    position: relative;
+}
+.discussion--area .question--responses .question div{
+    position: absolute;
+    right: 15px;
+    color: #ed7839;
+    font-size: 14px;
+    font-weight: 700;
+    display: none;
+}
+.discussion--area .question--responses .question.check--author{
+    background-color: #f8f8f8;
+}
+.discussion--area .question--responses .question.check--author div{
+    display: block;
+}
+.discussion--area .question--responses .question div>span{
+    margin-right: 15px;
+}
+
+/*
+*****Footer*****
+*/
+footer{
+    margin-top: 50px;  
+}
+footer img{
+    width: 100%;
 }
 
 
 
+/*
+*****Responsive*****
+*/
+
+@media only screen and (max-width: 1315px){
+    .header--left h3{
+        margin-bottom: 10px;
+    }
+    .header--right{
+        margin-top: 10px;
+    }
+    .aside--video{
+        align-items: flex-start;
+        margin: 20px 0 0 0;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .button--area{
+        margin-right: 20px;
+        flex-direction: row;
+        justify-content: center;
+        flex: 1;
+        width: 100%;
+    }
+    .button--area .star,
+    .button--area .doi,
+    .button--area .download{
+        text-align: center;
+        margin-right: 5px;
+        padding: 2px 20px;
+        margin-bottom: 10px;
+    }
+    .button--area .star img,
+    .button--area .doi img{
+        top: 3px;
+    }
+    .aside--video .details{
+        height: 100px;
+    }
+    .content--info>div>a{
+        display: none;
+    }
+    .content--info{
+        flex-direction: column;
+    }
+    .content--info>div:first-child{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 1055px){
+    .header--right .language{
+        height: 25px;
+    }
+    .header--right{
+        margin-bottom: 10px;
+    }
+    .video>iframe,
+    .video .opacity--video{
+        width: 550px;
+        height: 350px;
+        border-radius: 5px;
+    }
+    .opacity--video{
+        padding: 20px;
+    }
+    .opacity--video .title--video{
+        font-size: 18px;
+    }
+    .author--video h2{
+        font-size: 20px;
+    }
+    .author--video h3 {
+        font-size: 14px;
+    }
+    .video .img--video img{
+        height: 55px;
+        width: 55px;
+    }
+    .video .img--video{
+        height: 60px;
+        width: 60px;
+    }
+}
+@media only screen and (max-width: 800px){
+    aside.left--menu{
+        display: none;
+        position: fixed;
+    }
+    .menu--mobile{
+        display: block;
+    }
+    .menu--mobile:hover{
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 600px){
+    .header--left h2, .header--left h3{
+        font-size: 12px;
+    }
+    .header--left h1{
+        font-size: 16px;
+    }
+    .video>iframe,
+    .video .opacity--video{
+        width: 400px;
+        height: 280px;
+        border-radius: 5px;
+    }
+    .opacity--video{
+        padding: 10px;
+    }
+    .content--info>div>h1{
+        font-size: 18px;
+    }
+    .opacity--video .title--video{
+        font-size: 14px;
+    }
+    .author--video h2{
+        font-size: 14px;
+    }
+    .author--video h3 {
+        font-size: 10px;
+    }
+    .video .img--video img{
+        height: 45px;
+        width: 45px;
+    }
+    .video .img--video{
+        height: 55px;
+        width: 55px;
+    }
+    .box--title,
+    .discussions .standard--content h1,
+    .discussion--area .topic--submitted h1{
+        font-size: 16px;
+    }
+    .questions--area .card--title,
+    .discussion--area .topic--form form label,
+    .discussion--area .model.model--submitted .opacity--submitted h1{
+        font-size: 14px;
+    }
+    .button--area .download,
+    .sumary .sumary--content p,
+    .discussion--area .topic--form p,
+    .discussion--area .topic--form form input,
+    .discussion--area .topic--form form textarea,
+    .discussion--area .topic--form label button,
+    .questions--area .card--text,
+    .discussion--area .question--button .all--like,
+    .discussion--area .question--button .all--like>span,
+    .discussion--area .question--button .all--response,
+    .discussion--area .question--button .all--response>span,
+    .discussion--area .topic--submitted p,
+    .discussion--area .topic--submitted a,
+    .discussion--area .model.model--submitted .opacity--submitted>div{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 430px){
+    .header--left h2, .header--left h3{
+        font-size: 12px;
+    }
+    .header--left h1{
+        font-size: 14px;
+    }
+    .header--right .user--info h4{
+        font-size: 12px;
+    }
+    .header--right .user--info span{
+        font-size: 10px;
+    }
+    .video>iframe,
+    .video .opacity--video{
+        width: 300px;
+        height: 230px;
+        border-radius: 5px;
+    }
+}
 
 
