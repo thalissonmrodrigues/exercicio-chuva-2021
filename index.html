@@ -13,16 +13,16 @@
     </div>
     <aside class="left--menu"> <!--menu lateral esquerdo-->
         <div class="menu--content">
-            <div><a href="">Slaca 2019</a></div>
+            <div><a href="https://chuva.net.br/valores/" target="_blank">Slaca 2019</a></div>
             <div class="logo--left-menu"><img src="./assets/images/13slaca.svg" alt="Logo"></div>
             <nav>
                 <ul>
                     <li><a href="">Apresentação</a></li>
                     <li><a href="">Comitês</a></li>
-                    <li><a href="">Autores</a></li>
+                    <li><a href="https://www.linkedin.com/company/chuva-inc./" target="_blank">Autores</a></li>
                     <li><a href="">Eixos temáticos</a></li>
                     <li><a href="" class="active">Trabalhos</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li><a href="https://www.linkedin.com/in/thalissonmrodrigues" target="_blank">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -80,7 +80,7 @@
                 
                 <div class="aside--video"> <!--campo ao lado do vídeo-->
                     <div class="button--area"> <!--botões de download / estrela / doi-->
-                        <a class="download btn--edit" href=""><img src="./assets/images/download.svg" alt="download">Download</a>
+                        <a class="download btn--edit" href="https://www.instagram.com/chuvainc/" target="_blank"><img src="./assets/images/download.svg" alt="download">Download</a>
                         <a class="star btn--edit" href=""><img src="./assets/images/star.svg" alt="star"></a>
                         <a class="doi btn--edit" href=""><img src="./assets/images/doi.svg" alt=""></a>
                     </div>
@@ -172,7 +172,7 @@
                             <form action="#" method="POST">
                                 <label><!--assunto do tópico-->
                                     Assunto<br>
-                                    <input type="text" name="assunto" placeholder="Defina um tópico sucinto para notificar os autores...">
+                                    <input type="text" maxlength="30" name="assunto" placeholder="Defina um tópico sucinto para notificar os autores...">
                                 </label>
                                 <br>
                                 <label><!--centeúdo do tópico-->
@@ -193,11 +193,10 @@
                             <button>criar novo tópico</button><!--cria um novo tópico-->
                         </div>
                     </div>
-                    <div class="questions--area"><!--area que mostra os tópicos-->
-
-
-
-                        <div class="model model--submitted"><!--tópico enviado-->
+                    <!--area que mostra os tópicos-->
+                    <div class="questions--area">
+                        <!--tópico enviado-->
+                        <div class="model model--submitted">
                             <div class="opacity--submitted">
                                 <img src="./assets/images/check-black.svg" alt="">
                                 <h1>Aguardando feedback dos autores</h1>
@@ -212,6 +211,45 @@
                                 </div>
                             </div>
                         </div>
+                        <!--cartão modelo-->
+                        <div class="model example" style="display: none;">
+                            <div class="card"><!--cartão do tópico-->
+                                <div class="question">
+                                    <!--informações do tópico-->
+                                    <h1 class="card--title">Assunto da pergunta aparece aqui</h1>
+                                    <span class="card--author">Carlos Henrique Santos</span>
+                                    <p class="card--text">Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processos<span>...</span></p>
+                                </div>
+                                <div class="question--button">
+                                    <!--botões de interação com o tópico-->
+                                    <div class="menu--ellipsis">
+                                        <div>excluir</div>
+                                    </div>
+                                    <div class="more--options">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <button class="like"><img data-like="false" src="./assets/images/heart.svg" alt="like"></button>
+                                        <!--informações de quantos curtidas e resposta teve o tópico-->
+                                        <div class="all--like"><span>0</span> like</div>
+                                        <div class="all--response"><span>0</span> resposta</div>
+                                </div>
+                            </div>
+                            <div class="question--responses">
+                                <!--area de resposta-->
+                            </div>
+                        </div>
+                        <!--modelo resposta-->
+                        <div class="question check--author" style="display: none;"><!--resposta-->
+                            <div><!--verifica autor-->
+                                <span>Author</span>
+                                <img src="./assets/images/check-orange.svg" alt="">
+                            </div>
+                            <span class="card--author">Adriano da Silva</span>
+                            <p class="card--text">Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
+                        </div>
+
 
                         <div class="model">
                             <div class="card"><!--cartão do tópico-->
@@ -223,12 +261,15 @@
                                 </div>
                                 <div class="question--button">
                                     <!--botões de interação com o tópico-->
+                                    <div class="menu--ellipsis">
+                                        <div>excluir</div>
+                                    </div>
                                     <div class="more--options">
                                         <span></span>
                                         <span></span>
                                         <span></span>
                                     </div>
-                                    <button class="like"><img src="./assets/images/heart.svg" alt="like"></button>
+                                    <button class="like"><img data-like="false" src="./assets/images/heart.svg" alt="like"></button>
                                         <!--informações de quantos curtidas e resposta teve o tópico-->
                                         <div class="all--like"><span>1</span> like</div>
                                         <div class="all--response"><span>1</span> resposta</div>
@@ -238,7 +279,7 @@
                                 <div class="question check--author"><!--resposta-->
                                     <div><!--verifica autor-->
                                         <span>Author</span>
-                                        <img src="./assets/images/check-orange.png" alt="">
+                                        <img src="./assets/images/check-orange.svg" alt="">
                                     </div>
                                     <span class="card--author">Adriano da Silva</span>
                                     <p class="card--text">Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
@@ -256,22 +297,25 @@
                                 </div>
                                 <div class="question--button">
                                     <!--botões de interação com o tópico-->
+                                    <div class="menu--ellipsis">
+                                        <div>excluir</div>
+                                    </div>
                                     <div class="more--options">
                                         <span></span>
                                         <span></span>
                                         <span></span>
                                     </div>
-                                    <button class="like"><img src="./assets/images/heart.svg" alt="like"></button>
+                                    <button class="like"><img data-like="false" src="./assets/images/heart.svg" alt="like"></button>
                                         <!--informações de quantos curtidas e resposta teve o tópico-->
                                         <div class="all--like"><span>1</span> like</div>
-                                        <div class="all--response"><span>1</span> resposta</div>
+                                        <div class="all--response"><span>4</span> resposta</div>
                                 </div>
                             </div>
                             <div class="question--responses"><!--area de resposta-->
                                 <div class="question check--author"><!--resposta-->
                                     <div><!--verifica autor-->
                                         <span>Author</span>
-                                        <img src="./assets/images/check-orange.png" alt="">
+                                        <img src="./assets/images/check-orange.svg" alt="">
                                     </div>
                                     <span class="card--author">Adriano da Silva</span>
                                     <p class="card--text">Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
@@ -279,7 +323,7 @@
                                 <div class="question"><!--resposta-->
                                     <div><!--verifica autor-->
                                         <span>Author</span>
-                                        <img src="./assets/images/check-orange.png" alt="">
+                                        <img src="./assets/images/check-orange.svg" alt="">
                                     </div>
                                     <span class="card--author">Carlos Henrique Santos</span>
                                     <p class="card--text">
@@ -290,7 +334,7 @@
                                 <div class="question check--author"><!--resposta-->
                                     <div><!--verifica autor-->
                                         <span>Coautor</span>
-                                        <img src="./assets/images/check-orange.png" alt="">
+                                        <img src="./assets/images/check-orange.svg" alt="">
                                     </div>
                                     <span class="card--author">Carmila Ferreira Andrade</span>
                                     <p class="card--text">
@@ -302,7 +346,7 @@
                                 <div class="question check--author"><!--resposta-->
                                     <div><!--verifica autor-->
                                         <span>Coautor</span>
-                                        <img src="./assets/images/check-orange.png" alt="">
+                                        <img src="./assets/images/check-orange.svg" alt="">
                                     </div>
                                     <span class="card--author">Ana Carolina</span>
                                     <p class="card--text">Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
@@ -314,7 +358,7 @@
             </section>
 
             <footer><!--rodapé-->
-                <a href=""><img src="./assets/images/footer.svg" alt=""></a>
+                <a href="https://galoa.com.br/" target="_blank"><img src="./assets/images/footer.svg" alt=""></a>
             </footer>
         </div>
     </main>

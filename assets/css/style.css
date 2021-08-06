@@ -14,6 +14,7 @@
 */
 body{
     display: flex;
+
 }
 body::-webkit-scrollbar{
     width: 7px;
@@ -38,7 +39,8 @@ main{
     flex:1;
 }
 .container{
-    padding: 0 3%;
+    margin: auto;
+    max-width: calc(100% - 6%);
 }
 .btn--edit{
     background-color: #ed7839;
@@ -108,10 +110,9 @@ nav a:hover{
 */
 .menu--mobile{
     background-color: #f48e43;
-    opacity: 0.7;
     position: fixed;
     top: 5%;
-    padding: 12px 7px;
+    padding: 20px 7px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     display: none;
@@ -458,7 +459,7 @@ header div.container{
     text-align: justify;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 5; /* click valor recebe 0 */
+    -webkit-line-clamp: 5; /* 0 || 5 */
     -webkit-box-orient: vertical;
 }
 .sumary .sumary--content p br{
@@ -501,6 +502,7 @@ header div.container{
     display: flex; /*muda ao clicar no botão criar tópico flex*/
     flex-direction: column;
     align-items: center;
+    transition: opacity 0.1s;
 }
 .discussions .standard--content h1{
     font-size: 18px;
@@ -544,6 +546,8 @@ header div.container{
 */
 .discussion--area .topic--form{
     display: none;  /*troca ao clicar em enviar block*/
+    transition: opacity 0.1s;
+    opacity: 0;
 }
 .discussion--area .topic--form p{
     text-align: center;
@@ -615,6 +619,8 @@ header div.container{
 .discussion--area .topic--submitted{
     display: none; /*muda ao clicar no botão block*/
     text-align: center;
+    transition: opacity 0.1s;
+    opacity: 0;
 }
 .discussion--area .topic--submitted h1{
     font-size: 18px;
@@ -657,6 +663,8 @@ header div.container{
     position: relative;
     height: 140px;
     display: none; /* ativa block quando envia tópico*/
+    transition: opacity 0.1s;
+    opacity: 0;
 }
 .discussion--area .model.model--submitted .question{
     filter:blur(3px);
@@ -720,12 +728,14 @@ header div.container{
     font-size: 14px;
     color: #5c5c5c;
     margin: 5px 0;
+    word-break: break-all
 }
 .questions--area .card .card--text{
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    word-break: break-all
 }
 .discussion--area .s--text>span{
     display: block; /*clickou fica none*/
@@ -736,9 +746,13 @@ header div.container{
 .discussion--area .question--button{
     display: flex;
     align-items: center;
+    position: relative;
 }
 .discussion--area .question--button .more--options{
     cursor: pointer;
+    padding: 0 7px 0 15px;
+    position: relative;
+    left: -15px;
 }
 .discussion--area .question--button .more--options>span{
     display: block;
@@ -746,7 +760,22 @@ header div.container{
     margin: 3px 0;
     background-color: #ed7839;
     border-radius: 5px;
-    margin-right: 15px;
+}
+.discussion--area .question--button .menu--ellipsis{
+    position: absolute;
+    top: 25px;
+    background-color: #FFF;
+    border: solid 1px #e7e7e7;
+    border-radius: 4px;
+    display: none;
+}
+.discussion--area .question--button .menu--ellipsis>div{
+    font-size: 14px;
+    color: #5c5c5c;
+    padding: 5px;
+}
+.discussion--area .question--button .menu--ellipsis>div:hover{
+    color: #ed7839;
 }
 .discussion--area .question--button .like{
     padding: 4px 6px;
@@ -902,9 +931,6 @@ footer img{
     }
     .menu--mobile{
         display: block;
-    }
-    .menu--mobile:hover{
-        opacity: 1;
     }
 }
 @media only screen and (max-width: 600px){
