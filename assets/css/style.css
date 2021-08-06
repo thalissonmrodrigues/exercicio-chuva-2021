@@ -14,7 +14,6 @@
 */
 body{
     display: flex;
-
 }
 body::-webkit-scrollbar{
     width: 7px;
@@ -33,6 +32,7 @@ aside.left--menu{
     display: block;
     height: 100%;
     z-index: 50;
+    transition: margin-left 0.5s;
 }
 main{
     background-color: #FFF;
@@ -40,7 +40,7 @@ main{
 }
 .container{
     margin: auto;
-    max-width: calc(100% - 6%);
+    max-width: 1050px
 }
 .btn--edit{
     background-color: #ed7839;
@@ -67,6 +67,8 @@ main{
     left: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     height: 100vh;
+    transition: margin-left 0.5s;
+    display: block;
 }
 .menu--content div:first-child{
     height: 70px;
@@ -120,6 +122,23 @@ nav a:hover{
     font-size: 10px;
     color: #FFF;
     z-index: 10;
+}
+.closeMenu{
+    color: #fff;
+    width: 30px;
+    height: 50px;
+    padding-left: 5px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: #f48e43;
+    position: fixed;
+    line-height: 50px;
+    font-weight: 900;
+    font-size: 25px;
+    left: 220px;
+    top: 10px;
+    z-index: 49;
+    display: none;
 }
 
 /*
@@ -308,7 +327,7 @@ header div.container{
     position: absolute;
     top: 0;
     left: 0;
-    display: flex; /* sai ao clicar flex/none*/
+    display: flex;
 }
 /*
 *****Video opacity*****
@@ -380,8 +399,8 @@ header div.container{
 */
 .aside--video .details{
     overflow-x: auto;    
-   overflow-y: scroll;
-   height: 365px;
+    overflow-y: scroll;
+    height: 365px;
 }
 .aside--video .details ul{
     margin: 0 15px 25px 15px;
@@ -459,18 +478,18 @@ header div.container{
     text-align: justify;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 5; /* 0 || 5 */
+    -webkit-line-clamp: 5; 
     -webkit-box-orient: vertical;
 }
 .sumary .sumary--content p br{
-    display: none; /* click valor recebe block*/
+    display: none; 
 }
 .sumary .sumary--content a{
     text-decoration: none;
     font-size: 14px;
     color: #ed7839;
     font-weight: 500;
-    display: block; /* click vira none */
+    display: block; 
     position: absolute;
     bottom: 15px;
     right: 15px;
@@ -499,7 +518,7 @@ header div.container{
 *****Standard Content*****
 */
 .discussions .standard--content{
-    display: flex; /*muda ao clicar no botão criar tópico flex*/
+    display: flex; 
     flex-direction: column;
     align-items: center;
     transition: opacity 0.1s;
@@ -545,7 +564,7 @@ header div.container{
 *****Topic form*****
 */
 .discussion--area .topic--form{
-    display: none;  /*troca ao clicar em enviar block*/
+    display: none;  
     transition: opacity 0.1s;
     opacity: 0;
 }
@@ -617,7 +636,7 @@ header div.container{
 *****Topic submitted*****
 */
 .discussion--area .topic--submitted{
-    display: none; /*muda ao clicar no botão block*/
+    display: none; 
     text-align: center;
     transition: opacity 0.1s;
     opacity: 0;
@@ -662,7 +681,7 @@ header div.container{
 .discussion--area .model.model--submitted{
     position: relative;
     height: 140px;
-    display: none; /* ativa block quando envia tópico*/
+    display: none; 
     transition: opacity 0.1s;
     opacity: 0;
 }
@@ -738,7 +757,7 @@ header div.container{
     word-break: break-all
 }
 .discussion--area .s--text>span{
-    display: block; /*clickou fica none*/
+    display: block; 
 }
 /*
 *****Question button*****
@@ -748,22 +767,18 @@ header div.container{
     align-items: center;
     position: relative;
 }
-.discussion--area .question--button .more--options{
-    cursor: pointer;
-    padding: 0 7px 0 15px;
-    position: relative;
-    left: -15px;
-}
 .discussion--area .question--button .more--options>span{
     display: block;
     padding: 2px;
-    margin: 3px 0;
     background-color: #ed7839;
+    border: solid #FFF 2px;
     border-radius: 5px;
+    cursor: pointer;
 }
 .discussion--area .question--button .menu--ellipsis{
     position: absolute;
     top: 25px;
+    z-index: 10;
     background-color: #FFF;
     border: solid 1px #e7e7e7;
     border-radius: 4px;
@@ -778,13 +793,18 @@ header div.container{
     color: #ed7839;
 }
 .discussion--area .question--button .like{
-    padding: 4px 6px;
     background-color: #ed7839;
     border: none;
     border-radius: 2px;
     display: flex;
     cursor: pointer;
     margin-right: 15px;
+    margin-left: 10px;
+    position: relative;
+}
+.discussion--area .question--button .like img{
+    padding: 4px 6px;
+    display: block;
 }
 .discussion--area .question--button .all--like,
 .discussion--area .question--button .all--like>span,
@@ -802,7 +822,7 @@ header div.container{
 *****Question responses*****
 */
 .discussion--area .question--responses{
-    display: none; /*muda pra block se click*/
+    display: none; 
 }
 .discussion--area .question--responses .question{
     padding: 10px 20px;
@@ -844,6 +864,9 @@ footer img{
 */
 
 @media only screen and (max-width: 1315px){
+    .container{
+        margin: 0 3%;
+    }
     .header--left h3{
         margin-bottom: 10px;
     }
@@ -925,9 +948,11 @@ footer img{
     }
 }
 @media only screen and (max-width: 800px){
-    aside.left--menu{
-        display: none;
+    aside.left--menu,
+    .menu--content{
+        display: block;
         position: fixed;
+        margin-left: -220px;
     }
     .menu--mobile{
         display: block;
@@ -1003,8 +1028,12 @@ footer img{
     .header--left h1{
         font-size: 14px;
     }
-    .header--right .user--info h4{
+    .header--right .user--info h4,
+    .discussion--area .question--responses .question div{
         font-size: 12px;
+    }
+    .discussion--area .question--responses .question div>span{
+        margin-right: 5px;
     }
     .header--right .user--info span{
         font-size: 10px;
@@ -1014,6 +1043,11 @@ footer img{
         width: 300px;
         height: 230px;
         border-radius: 5px;
+    }
+}
+@media only screen and (max-width: 310px){
+    .discussion--area .question--responses .question div>img{
+        display: none;
     }
 }
 

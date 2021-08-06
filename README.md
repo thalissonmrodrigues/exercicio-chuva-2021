@@ -1,19 +1,20 @@
 # EXERCÍCIO FRONT-END
 
-## Teste feito para avaliar meu conhecimento
-
+## Teste para avaliar meu conhecimento
 
 <h4 align="center"> 
-	🚧 Em construção...  🚧
+	Finalizado ✅
 </h4>
 
 ### 🛠 Tecnologias
 
-As seguintes ferramentas estão sendo usadas na construção do projeto:
+As seguintes ferramentas foram usadas na construção do projeto:
 
 - HTML
 - CSS
 - Javascript
 
+### Autor
 
+Feito com ❤️ por [Thalisson](https://www.linkedin.com/in/thalissonmrodrigues/) 👋🏽
 
