@@ -4,9 +4,9 @@
 
 ### Status do projeto
 
-<h3> 
+<h4> 
 	Finalizado ✅
-</h3>
+</h4>
 
 ### 🛠 Tecnologias
 
