@@ -2,9 +2,11 @@
 
 ## Teste para avaliar meu conhecimento
 
-<h4 align="center"> 
+### Status do projeto
+
+<h3> 
 	Finalizado ✅
-</h4>
+</h3>
 
 ### 🛠 Tecnologias
 
