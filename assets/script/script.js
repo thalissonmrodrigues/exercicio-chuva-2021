@@ -187,10 +187,9 @@ function topicSubmitted(event){
     let user = document.querySelector('.user--info span').innerHTML
 
     if(eTopic == true){
-        eInput.innerHTML = document.querySelector('.discussion--area .topic--form form input').value
-        eTextarea.innerHTML = document.querySelector('.discussion--area .topic--form form textarea').value
-
         if(topic !== '' && textarea !== '' && user !== ''){
+            eInput.innerHTML = document.querySelector('.discussion--area .topic--form form input').value
+            eTextarea.innerHTML = document.querySelector('.discussion--area .topic--form form textarea').value
             let topicForm = document.querySelector('.discussion--area .topic--form')
             let submitted = document.querySelector('.discussion--area .topic--submitted')
             topicForm.style.opacity = 0
