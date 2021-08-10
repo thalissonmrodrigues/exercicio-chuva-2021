@@ -484,18 +484,18 @@ header div.container{
 .sumary .sumary--content p br{
     display: none; 
 }
-.sumary .sumary--content a{
+.sumary .sumary--content div{
     text-decoration: none;
     font-size: 14px;
     color: #ed7839;
     font-weight: 500;
     display: block; 
     position: absolute;
-    bottom: 15px;
+    bottom: 33px;
     right: 15px;
     background-color: #FFF;
 }
-.sumary .sumary--content a>span{
+.sumary .sumary--content div>span{
     color: #595959;
     font-weight: 400;
 }
@@ -678,41 +678,44 @@ header div.container{
 /*
 *****Question submitted*****
 */
-.discussion--area .model.model--submitted{
+.discussion--area .model{
     position: relative;
-    height: 140px;
-    display: none; 
-    transition: opacity 0.1s;
-    opacity: 0;
 }
-.discussion--area .model.model--submitted .question{
-    filter:blur(3px);
-    opacity: 0.5;
+.discussion--area .model.blur .opacity--submitted{
+    background-color: rgba(239, 239, 239, 0.6);
+    border: solid #CCC 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
-.discussion--area .model.model--submitted .opacity--submitted{
-   background-color: #f7f7f7;
-   position:absolute;
-   height: 100%;
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+.discussion--area .model .opacity--submitted{
+    display: none;
 }
-.discussion--area .model.model--submitted .opacity--submitted h1{
-    font-size: 16px;
-    font-family:  Quicksand, Arial, Helvetica, sans-serif;
+.discussion--area .model .opacity--submitted h1{
+    font-size: 16px; 
     color: #5c5c5c;
-    font-weight: 700;
-    margin: 10px 0;
-}
-.discussion--area .model.model--submitted .opacity--submitted>div{
-    font-size: 14px;
+    margin: 5px 0;
     font-family:  Quicksand, Arial, Helvetica, sans-serif;
+}
+.discussion--area .model .opacity--submitted div{
+    font-size: 14px;
     color: #ed7839;
     text-decoration: underline;
-    font-weight: 500;
     cursor: pointer;
+    font-family:  Quicksand, Arial, Helvetica, sans-serif;
+}
+.discussion--area .model.blur .question,
+.discussion--area .model.blur .question--button{
+    filter: blur(1.5px);
 }
 
 /*
@@ -950,7 +953,6 @@ footer img{
 @media only screen and (max-width: 800px){
     aside.left--menu,
     .menu--content{
-        display: block;
         position: fixed;
         margin-left: -220px;
     }
@@ -1001,7 +1003,7 @@ footer img{
     }
     .questions--area .card--title,
     .discussion--area .topic--form form label,
-    .discussion--area .model.model--submitted .opacity--submitted h1{
+    .discussion--area .model .opacity--submitted h1{
         font-size: 14px;
     }
     .button--area .download,
@@ -1017,7 +1019,7 @@ footer img{
     .discussion--area .question--button .all--response>span,
     .discussion--area .topic--submitted p,
     .discussion--area .topic--submitted a,
-    .discussion--area .model.model--submitted .opacity--submitted>div{
+    .discussion--area .model .opacity--submitted div{
         font-size: 12px;
     }
 }
@@ -1051,4 +1053,10 @@ footer img{
     }
 }
 
+@media only screen and (max-height: 580px){
+    aside.left--menu,
+    .menu--content{
+        overflow-y: auto;
+    }
+}
 
